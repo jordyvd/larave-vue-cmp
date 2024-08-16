@@ -1,0 +1,77 @@
+// 👉 Table
+.v-table {
+  th {
+    color: rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity)) !important;
+    font-size: 0.8125rem;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+
+    .v-data-table-header__content {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+// 👉 Datatable
+.v-data-table,
+.v-table {
+  table {
+    thead,
+    tbody {
+      tr {
+        th,
+        td {
+          &:first-child:has(.v-checkbox-btn) {
+            padding-inline-start: 13px !important;
+          }
+
+          &:first-child {
+            padding-inline-start: 24px !important;
+          }
+
+          &:last-child {
+            padding-inline-end: 24px !important;
+          }
+        }
+      }
+    }
+
+    tbody {
+      .v-data-table-group-header-row {
+        td {
+          background-color: rgb(var(--v-theme-surface));
+        }
+      }
+    }
+
+    // thead tr th{
+    //   background: rgba(var(--v-global-theme-primary), 0.5)!important;
+    //   color: white !important;
+    // }
+  }
+}
+.v-table__wrapper{
+  &::-webkit-scrollbar {
+    width: 8px; /* Ancho del scrollbar */
+    height: 8px; /* Altura del scrollbar */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(var(--v-border-color), var(--v-border-opacity)); /* Color del thumb (barra de desplazamiento) */
+    //border-radius: 2px; /* Borde redondeado del thumb */
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(var(--v-border-color), 0.2); /* Color del thumb al pasar el mouse */
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent; /* Color de fondo del track (fondo del scrollbar) */
+   // border-radius: 2px; /* Borde redondeado del track */
+  }
+  
+  &::-webkit-scrollbar-corner {
+    display: none; /* Ocultar la esquina del scrollbar */
+  }
+}
